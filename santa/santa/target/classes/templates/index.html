@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head> 
+	<title>Home</title>
+	
+	<style>
+		.st {
+		  border: 2px solid black;
+		  color: black;
+		  background-color: green;
+		  padding: 15px 30px;		  
+		  display: inline-block;
+		  text-align: center;
+		  text-decoration: none;		 
+		}	    
+	</style>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+	<p>read files and fill the database:</p>
+	<a th:href="@{/fillDb}" class="st">click</a>
+
+</div>
+
+</body>
+
+</html>

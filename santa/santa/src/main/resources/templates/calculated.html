@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head> 
+	<title>report</title>
+	
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<ul>
+    <li th:each="el: ${count}">
+        <h3 th:text="${el.moneyLocation}"></h3>         
+        
+        <table>
+        	<thead>
+				<tr>
+					<th>Totals by currencies</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="instance : ${el.amountsCurrencies}">
+			 		<td th:text="${instance.key}"></td> 
+			    	<td th:text="${instance.value}"></td>		  
+				</tr>
+			</tbody>				
+		</table>
+    </li>
+</ul>
+    
+
+</div>
+
+</body>
+
+</html>
